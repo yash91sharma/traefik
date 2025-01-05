@@ -1,0 +1,15 @@
+http:
+  routers:
+    pdf:
+      rule: "Host(`pdf.yashrma.xyz`)"
+      entryPoints:
+        - websecure
+      service: pdf
+      tls:
+        certResolver: cloudflare
+
+  services:
+    pdf:
+      loadBalancer:
+        servers:
+          - url: "http://machine1Ip:port1"
