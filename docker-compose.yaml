@@ -1,6 +1,3 @@
-# create a "yfe" network manually
-# before running this container.
-
 version: '3.8'
 
 services:
@@ -18,9 +15,6 @@ services:
       # static config file
       - ./config/traefik.yaml:/etc/traefik/traefik.yaml:ro
       - ./data/certs/:/var/traefik/certs/:rw
-    networks:
-      - yfe
+      # dynamic config file
+      - ./dynamic_config/:/etc/traefik/dynamic/:ro
     restart: always
-networks:
-  yfe:
-    external: true
