@@ -1,7 +1,7 @@
 http:
   routers:
     pdf:
-      rule: "Host(`pdf.yashrma.xyz`)"
+      rule: "Host(`subdomain1.domain.xyz`)"
       entryPoints:
         - websecure
       service: pdf
