@@ -11,9 +11,9 @@ services:
     environment:
       - CF_DNS_API_TOKEN=$CF_DNS_API_TOKEN
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
       # static config file
       - ./config/traefik.yaml:/etc/traefik/traefik.yaml:ro
+      # for certs
       - ./data/certs/:/var/traefik/certs/:rw
       # dynamic config file
       - ./dynamic_config/:/etc/traefik/dynamic/:ro
