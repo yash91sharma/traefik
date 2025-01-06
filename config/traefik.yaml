@@ -15,7 +15,7 @@ entryPoints:
 certificatesresolvers:
   cloudflare:
     acme:
-      email: "yourEmail@gmail.com"
+      email: "email@gmail.com"
       storage: /var/traefik/certs/cloudflare-acme.json
       dnsChallenge:
         provider: cloudflare
